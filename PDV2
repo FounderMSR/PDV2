@@ -34,8 +34,7 @@ local MainTab = Window:CreateTab("Main", 4483362458) -- Title, Image
 local Button = MainTab:CreateButton({
    Name = "Aimbot",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/FounderMSR/Aimbot/main/Aimbot", true))()
-
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/RedWirePlatinumTwo/RobloxScripts/main/Aimbot.lua"))()
    end,
 })
 -----------------------------------------
