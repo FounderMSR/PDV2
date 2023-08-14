@@ -1,0 +1,61 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "FounderV2",
+   LoadingTitle = "FounderV2",
+   LoadingSubtitle = "by D4RK",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "https://discord.gg/BVwN6MKK", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "FounderV2",
+      Subtitle = "Key System",
+      Note = "Discord",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"FounderV2"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+--Tabs--
+local MainTab = Window:CreateTab("Main", 4483362458) -- Title, Image
+
+
+
+--toggles--
+local Button = MainTab:CreateButton({
+   Name = "Aimbot",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/FounderMSR/Aimbot/main/Aimbot", true))()
+
+   end,
+})
+-----------------------------------------
+local Button = MainTab:CreateButton({
+   Name = "Esp",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/FounderMSR/ESP/main/ESP"))()
+   end,
+})
+------------------------------------------
+local Button = MainTab:CreateButton({
+   Name = "Fullbright",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/FounderMSR/FB/main/FB"))()
+   end,
+})
+---------------------------------------------
+local Button = MainTab:CreateButton({
+   Name = "Hitbox",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/vkTrolls/Advanced-Hitbox/main/Script"))()
+   end,
+})
